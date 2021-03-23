@@ -1,5 +1,5 @@
 <?php
-namespace SKYFILLERS\SfFilecollectionGallery\Hooks;
+namespace Machwatt\SfFilecollectionGallery\Hooks;
 
 /*
  * This file is part of the TYPO3 CMS project.

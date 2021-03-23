@@ -1,5 +1,5 @@
 <?php
-namespace SKYFILLERS\SfFilecollectionGallery\Controller;
+namespace Machwatt\SfFilecollectionGallery\Controller;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -14,8 +14,8 @@ namespace SKYFILLERS\SfFilecollectionGallery\Controller;
  * The TYPO3 project - inspiring people to share!
  */
 
-use SKYFILLERS\SfFilecollectionGallery\Service\FileCollectionService;
-use SKYFILLERS\SfFilecollectionGallery\Service\FolderService;
+use Machwatt\SfFilecollectionGallery\Service\FileCollectionService;
+use Machwatt\SfFilecollectionGallery\Service\FolderService;
 use TYPO3\CMS\Core\Resource\Collection\AbstractFileCollection;
 use TYPO3\CMS\Core\Resource\FileCollectionRepository;
 
@@ -30,7 +30,7 @@ class GalleryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * File Collection Service
      *
-     * @var \SKYFILLERS\SfFilecollectionGallery\Service\FileCollectionService
+     * @var \Machwatt\SfFilecollectionGallery\Service\FileCollectionService
      */
     protected $fileCollectionService;
 
@@ -44,14 +44,14 @@ class GalleryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * Folder Service
      *
-     * @var \SKYFILLERS\SfFilecollectionGallery\Service\FolderService
+     * @var \Machwatt\SfFilecollectionGallery\Service\FolderService
      */
     protected $folderService;
 
     /**
      * Inject the FileCollectionService
      *
-     * @param \SKYFILLERS\SfFilecollectionGallery\Service\FileCollectionService $fileCollectionService The service
+     * @param \Machwatt\SfFilecollectionGallery\Service\FileCollectionService $fileCollectionService The service
      *
      * @return void
      */
@@ -75,7 +75,7 @@ class GalleryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * Inject the FolderService
      *
-     * @param \SKYFILLERS\SfFilecollectionGallery\Service\FolderService $folderService The service
+     * @param \Machwatt\SfFilecollectionGallery\Service\FolderService $folderService The service
      *
      * @return void
      */

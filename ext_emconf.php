@@ -1,6 +1,6 @@
 <?php
 
-$EM_CONF[$_EXTKEY] = [
+$EM_CONF['sf_filecollection_gallery'] = [
     'title' => 'FileCollection Gallery',
     'description' => 'Simple FileCollection Gallery',
     'category' => 'plugin',
@@ -11,12 +11,17 @@ $EM_CONF[$_EXTKEY] = [
     'uploadfolder' => '0',
     'createDirs' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '1.5.1',
+    'version' => '2.0.0',
     'constraints' => [
         'depends' => [
-            'typo3' => '9.5.0 - 9.5.99',
+            'typo3' => '10.4.0 - 10.4.99',
         ],
         'conflicts' => [],
         'suggests' => [],
     ],
+    'autoload' => [
+        'psr-4' => [
+            'Machwatt\\SfFilecollectionGallery\\' => 'Classes'
+        ]
+    ]
 ];

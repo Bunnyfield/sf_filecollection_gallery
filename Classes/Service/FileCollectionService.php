@@ -1,5 +1,5 @@
 <?php
-namespace SKYFILLERS\SfFilecollectionGallery\Service;
+namespace Machwatt\SfFilecollectionGallery\Service;
 
 /*
  * This file is part of the TYPO3 CMS project.

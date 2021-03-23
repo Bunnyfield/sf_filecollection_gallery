@@ -1,5 +1,5 @@
 <?php
-namespace SKYFILLERS\SfFilecollectionGallery\ViewHelpers;
+namespace Machwatt\SfFilecollectionGallery\ViewHelpers;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -15,9 +15,11 @@ namespace SKYFILLERS\SfFilecollectionGallery\ViewHelpers;
  */
 use TYPO3\CMS\Core\Page\PageRenderer;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Fluid\Core\Rendering\RenderingContextInterface;
-use TYPO3\CMS\Fluid\Core\ViewHelper\Facets\CompilableInterface;
+use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+use TYPO3Fluid\Fluid\Core\ViewHelper\ViewHelperInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
+
 
 /**
  * ViewHelper to include a css/js file
@@ -32,7 +34,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
  *
  * @author Jöran Kurschatke <info@joerankurschatke.de>
  */
-class IncludeFileViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper implements CompilableInterface
+class IncludeFileViewHelper extends AbstractViewHelper implements ViewHelperInterface
 {
     use CompileWithRenderStatic;
 
@@ -58,8 +60,8 @@ class IncludeFileViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractVie
         $path = $arguments['path'];
         $compress = (bool)$arguments['compress'];
         $pageRenderer = GeneralUtility::makeInstance(PageRenderer::class);
-        if (TYPO3_MODE === 'FE') {
-            $path = $GLOBALS['TSFE']->tmpl->getFileName($path);
+        if (TYPO3_MODE === 'FE') {            
+            $path = GeneralUtility::makeInstance(\TYPO3\CMS\Frontend\Resource\FilePathSanitizer::class)->sanitize($path);
 
             // JS
             if (strtolower(substr($path, -3)) === '.js') {

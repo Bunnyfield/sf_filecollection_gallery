@@ -63,7 +63,7 @@ for bxSlider already, add some handy JS initialization on document.ready.
 
 Your new Gallery/List.html file might look something like this:
 
-	{namespace s=SKYFILLERS\SfFilecollectionGallery\ViewHelpers}
+	{namespace s=Machwatt\SfFilecollectionGallery\ViewHelpers}
 	
 	<f:layout name="Default"/>
 	

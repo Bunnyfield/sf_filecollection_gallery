@@ -2,7 +2,7 @@
 defined('TYPO3_MODE') or die();
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-    'SKYFILLERS.' . $_EXTKEY,
+    'Machwatt.SfFilecollectionGallery',
     'Pifilecollectiongallery',
     [
         'Gallery' => 'list, nested, nestedFromFolder, listFromFolder',
@@ -15,4 +15,4 @@ defined('TYPO3_MODE') or die();
 );
 
 // Use hook from http://www.derhansen.de/2014/06/typo3-how-to-prevent-empty-flexform.html
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']['SKYFILLERS.' . $_EXTKEY] = 'SKYFILLERS\SfFilecollectionGallery\Hooks\DataHandlerHooks';
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']['sf_filecollection_gallery'] = 'Machwatt\SfFilecollectionGallery\Hooks\DataHandlerHooks';

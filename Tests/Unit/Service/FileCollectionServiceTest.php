@@ -1,5 +1,5 @@
 <?php
-namespace SKYFILLERS\SfFilecollectionGallery\Tests\Unit\Service;
+namespace Machwatt\SfFilecollectionGallery\Tests\Unit\Service;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -34,7 +34,7 @@ class FileCollectionServiceTest extends UnitTestCase
     /**
      * The FileCollectionService
      *
-     * @var \SKYFILLERS\SfFilecollectionGallery\Service\FileCollectionService
+     * @var \Machwatt\SfFilecollectionGallery\Service\FileCollectionService
      */
     protected $subject;
 
@@ -113,7 +113,7 @@ class FileCollectionServiceTest extends UnitTestCase
             ->method('getUid')
             ->will($this->returnValue(5));
 
-        $this->subject = GeneralUtility::makeInstance('SKYFILLERS\SfFilecollectionGallery\Service\FileCollectionService');
+        $this->subject = GeneralUtility::makeInstance('Machwatt\SfFilecollectionGallery\Service\FileCollectionService');
         $this->subject->injectFileCollectionRepository($this->fileCollectionRepositoryMock);
         $this->subject->injectFrontendConfigurationManager($this->frontendConfigurationManagerMock);
     }
